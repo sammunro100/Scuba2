@@ -1,0 +1,75 @@
+<section class="diveInfo">
+  <div class="diveInfo_meta">
+    <img src="../../assets/turtle.png" alt="" class="diveInfo_meta_img">
+    <h6 class="diveInfo_meta_title">Location - {{locoName}}</h6>
+  </div>
+  <div class="diveInfo_conditions">
+    <div class="diveInfo_conditions_weather">
+      <h6 class="diveInfo_conditions_weather_title">Weather Conditions</h6>
+      <div class="diveInfo_conditions_weather_widget">
+
+        <div class="diveInfo_test">
+          <i class="fas fa-cloud icon" style="color: #78909C"></i>
+          <p class="diveInfo_test_temp">25°C</p>
+          <p class="diveInfo_test_time">11:00 - 12:00</p>
+        </div>
+        <div class="diveInfo_test">
+          <i class="fas fa-wind icon" style="color: #212121"></i>
+          <p class="diveInfo_test_temp">20°C</p>
+          <p class="diveInfo_test_time">12:00 - 13:00</p>
+        </div>
+        <div class="diveInfo_test">
+          <i class="fas fa-sun icon" style="color: #FFC107"></i>
+          <p class="diveInfo_test_temp">18°C</p>
+          <p class="diveInfo_test_time">13:00 - 14:00</p>
+        </div>
+        <div class="diveInfo_test">
+          <i class="fas fa-cloud-showers-heavy icon" style="color: #3F51B5"></i>
+          <p class="diveInfo_test_temp">15°C</p>
+          <p class="diveInfo_test_time">15:00 - 16:00</p>
+        </div>
+        <div class="diveInfo_test">
+          <i class="fas fa-snowflake icon" style="color: #039BE5"></i>
+          <p class="diveInfo_test_temp">0°C</p>
+          <p class="diveInfo_test_time">16:00 - 17:00</p>
+        </div>
+        <i class="fas fa-chevron-right test2"></i>
+      </div>
+    </div>
+    <div class="diveInfo_conditions_surfaceTemp">
+      <h6 class="diveInfo_conditions_surfaceTemp_title">Surface Temperature</h6>
+      <div class="diveInfo_conditions_surfaceTemp_widget">
+        <i class="fas fa-thermometer-half icon" style="color: #42A5F5"></i>
+        <p class="diveInfo_conditions_surfaceTemp_widget_temp">- 5°C</p>
+      </div>
+    </div>
+    <div class="diveInfo_conditions_other">
+      <h6 class="diveInfo_conditions_other_title">Other conditions</h6>
+      <div class="diveInfo_conditions_other_widget">
+        <i class="far fa-grin-beam-sweat icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="diveInfo_about">
+    <h6 class="diveInfo_about_title">About - {{locoName}} Dive Sites</h6>
+    <p class="diveInfo_about_snippet">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, vitae. Officia
+      provident a ipsa facilis esse necessitatibus deserunt sunt quam exercitationem. Recusandae ducimus culpa id quidem
+      minus suscipit consectetur amet!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio ut aperiam totam labore suscipit magnam tempora
+      cumque cum illum vero nostrum a dolore voluptates eaque, ratione ex, officiis magni! Tenetur!
+    </p>
+    <div class="diveInfo_about_imageGallery">
+      <h6 class="diveInfo_about_title" style="margin-bottom: 12px">Snaps from {{locoName}} dives</h6>
+      <img src="../../assets/pic1.jpg" alt="" class="diveInfo_about_imageGallery_image" style="margin-right: 10px" (click)="toggleImagePreview('../../assets/pic1.jpg')">
+      <img src="../../assets/pic2.jpg" alt="" class="diveInfo_about_imageGallery_image" style="margin-right: 10px" (click)="toggleImagePreview('../../assets/pic2.jpg')">
+      <img src="../../assets/pic3.jpg" alt="" class="diveInfo_about_imageGallery_image" (click)="toggleImagePreview('../../assets/pic3.jpg')">
+      <img src="../../assets/pic4.jpg" alt="" class="diveInfo_about_imageGallery_image" style="margin-right: 10px" (click)="toggleImagePreview('../../assets/pic4.jpg')">
+      <img src="../../assets/pic5.jpg" alt="" class="diveInfo_about_imageGallery_image" style="margin-right: 10px;" (click)="toggleImagePreview('../../assets/pic5.jpg')">
+      <img src="../../assets/pic6.jpg" alt="" class="diveInfo_about_imageGallery_image" (click)="toggleImagePreview('../../assets/pic6.jpg')">
+    </div>
+  </div>
+  <button class="diveInfo_plotDive">Plot Dive</button>
+</section>
+
+<app-image-viewer (emitEvent)="toggleImagePreview()" [showImageViewer]="showImageViewer" [imgSrc]="imgSrc"></app-image-viewer>
